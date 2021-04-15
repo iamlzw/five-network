@@ -114,9 +114,10 @@ export CORE_PEER_TLS_ROOTCERT_FILE=$GOPATH/src/github.com/hyperledger/fabric-sam
 export CORE_PEER_MSPCONFIGPATH=$GOPATH/src/github.com/hyperledger/fabric-samples/five-network/crypto-config/peerOrganizations/org5.example.com/users/Admin@org5.example.com/msp
 export CORE_PEER_ADDRESS=peer0.org5.example.com:15051
 peer channel join -b mychannel.block
-
+```
 5.1.2 install chaincode
 
+```
 #install chaincode on peer0.org1
 export CORE_PEER_LOCALMSPID="Org1MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=$GOPATH/src/github.com/hyperledger/fabric-samples/five-network/crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
