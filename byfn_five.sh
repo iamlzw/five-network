@@ -93,6 +93,7 @@ export CORE_PEER_ADDRESS=peer0.org1.example.com:7051
 #instantiate chaincode on peer0.org1
 peer chaincode instantiate -o orderer.example.com:7050 --tls --cafile $GOPATH/src/github.com/hyperledger/fabric-samples/five-network/crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem -C mychannel -n mycc -v 1.0 -c '{"Args":["init","a", "100", "b","200"]}' -P "AND ('Org1MSP.peer','Org2MSP.peer')"
 
+sleep 1m
 peer chaincode query -C mychannel -n mycc -c '{"Args":["query","a"]}'
 
 # export peer0.org5 env
@@ -100,6 +101,7 @@ export CORE_PEER_LOCALMSPID="Org5MSP"
 export CORE_PEER_TLS_ROOTCERT_FILE=$GOPATH/src/github.com/hyperledger/fabric-samples/five-network/crypto-config/peerOrganizations/org5.example.com/peers/peer0.org5.example.com/tls/ca.crt
 export CORE_PEER_MSPCONFIGPATH=$GOPATH/src/github.com/hyperledger/fabric-samples/five-network/crypto-config/peerOrganizations/org5.example.com/users/Admin@org5.example.com/msp
 export CORE_PEER_ADDRESS=peer0.org5.example.com:15051
+sleep 1m
 peer chaincode query -C mychannel -n mycc -c '{"Args":["query","a"]}'
 
 
