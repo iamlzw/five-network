@@ -1,4 +1,4 @@
-this repo will create a five org fabric network.
+this repo will create a five orgs fabric network.
 
 # five-network
 reference https://hyperledger-fabric.readthedocs.io/en/release-1.4/build_network.html
